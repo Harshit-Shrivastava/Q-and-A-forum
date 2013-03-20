@@ -1,0 +1,103 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.master.vb" Inherits="Q_and_A_Forum.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Q and A Forum</title>
+
+    <LINK href="Style.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+<div style="margin:0px 0px 0px 0px auto">
+<form id="form1" runat="server">
+    <div class="title">
+        <div class="titlename">ShutterStock</div>
+    </div>
+    
+    <div style="background-color: #99CCFF; width:100%; height:2px;">
+    </div>
+    
+    <div class="options">
+      <div class="optionbar"><a class="a" href="index.aspx">Home</a></div>
+      <div class="optionbar"><a class="a" href="logout.aspx">Logout</a></div>
+      <div class="optionbar"><a class="a" href="profile.aspx">Profile</a></div>
+      <div class="optionbar"><a class="a" href="aboutus.aspx">About Us</a></div>
+      <div class="optionbar"><a class="a" href="faq.aspx">FAQs</a></div>  
+    </div>
+    
+    <div class="main">
+        
+        <br />
+        <div class="left">
+        </div>
+        <div class="content">
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+    
+        <div class="nav">
+            <br />
+            
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=2">Web Development</a><hr color="#9DABB0"/ ></div>
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=3">C/C++</a><hr color="#9DABB0" /></div><hr />
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=4">Java</a><hr color="#9DABB0" /></div><hr />
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=5">Game Development</a><hr color="#9DABB0" /></div><hr />
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=6">Theoretical CS</a><hr color="#9DABB0" /></div><hr />
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=7">Security</a><hr color="#9DABB0" /></div><hr />
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=8">Mobile Development</a><hr color="#9DABB0" /></div><hr />
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=9">Unix & Linux</a><hr color="#9DABB0" /></div><hr />
+            <div class="navbar"><a class="a" href="queslist.aspx?tid=10">Apple</a><hr color="#9DABB0" /></div><hr />         
+            
+            <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:forumConnectionString %>" 
+                SelectCommand="SELECT [name], [tid] FROM [topics] WHERE ([tid] &gt; @tid)">
+                <SelectParameters>
+                    <asp:Parameter DefaultValue="1" Name="tid" Type="Int32" />
+                </SelectParameters>
+            </asp:SqlDataSource>--%>
+            <%--<br />
+            <br />
+            <br />
+            <br />
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                DataSourceID="SqlDataSource1" DataKeyNames="tid">
+                <Columns>
+                    <asp:HyperLinkField DataTextField="name" HeaderText="Title" 
+                      DataNavigateUrlFields="tid" 
+                      DataNavigateUrlFormatString="queslist.aspx?tid={0}" >
+                    <ItemStyle Height="20px" />
+                    </asp:HyperLinkField>
+                </Columns>
+            </asp:GridView>--%>
+        </div>
+        <div class="right">
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    
+    <div class="foot">
+        <br /><br />
+        <center>
+            <a class="a" href="index.aspx">Home</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a class="a" href="logout.aspx">Logout</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a class="a" href="register.aspx">Register</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a class="a" href="aboutus.aspx">About Us</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            <a class="a" href="faq.aspx">FAQs</a> 
+
+            <br /><br />
+            <a class="a" href="disclaimer.aspx">Disclaimer</a>
+            <br /><br />
+            2012 &#169; ShutterStock
+        </center>
+    </div>
+    </form>
+</div>
+
+</body>
+</html>
